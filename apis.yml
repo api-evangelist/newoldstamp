@@ -1,8 +1,27 @@
 aid: newoldstamp
 name: Newoldstamp
-description: Newoldstamp is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Newoldstamp is an email signature management platform that lets companies
+  create, brand, and centrally manage professional email signatures across their teams.
+  It provides a signature generator with customizable templates, department- and role-based
+  signature deployment, email signature marketing banners and campaigns, click analytics,
+  and integrations with Google Workspace, Microsoft 365, and popular email clients.
+  Newoldstamp also operates Pearl Diver, a website-visitor identification product.
+  Founded in 2016 and backed by 500 Global, it serves marketing, sales, and IT teams
+  that want consistent branded email signatures at scale. The company exposes no public
+  developer API surface at this time.
 url: https://raw.githubusercontent.com/api-evangelist/newoldstamp/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://newoldstamp.com/images/logo-v4.svg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,9 +30,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Email Signatures
+- Email Signature Management
+- Email Marketing
+- Branding
+- SaaS
+- Productivity
+- Website Visitor Identification
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +47,26 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/newoldstamp-domain-security.yml
 - type: Website
   url: https://newoldstamp.com
+- type: Pricing
+  url: https://newoldstamp.com/pricing/
+- type: Blog
+  url: https://newoldstamp.com/blog/
+- type: Support
+  url: https://support.newoldstamp.com/en/
+- type: SignUp
+  url: https://app.newoldstamp.com/sign-up
+- type: Login
+  url: https://app.newoldstamp.com/sign-in
+- type: TermsOfService
+  url: https://newoldstamp.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://newoldstamp.com/privacy/
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
