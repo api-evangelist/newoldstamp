@@ -6,31 +6,35 @@ description: Newoldstamp is an email signature management platform that lets com
   signature deployment, email signature marketing banners and campaigns, click analytics,
   and integrations with Google Workspace, Microsoft 365, and popular email clients.
   Newoldstamp also operates Pearl Diver, a website-visitor identification product.
-  Founded in 2016 and backed by 500 Global, it serves marketing, sales, and IT teams
-  that want consistent branded email signatures at scale. The company exposes no public
-  developer API surface at this time.
+  Founded in 2016 and a wholly-owned subsidiary of Blackpearl Group since 2025 (previously
+  backed by 500 Global), it serves marketing, sales, and IT teams that want consistent
+  branded email signatures at scale. Newoldstamp publishes no documented public developer
+  program, but its dashboard is powered by a GraphQL API at newoldstamp.com/api/graphql
+  (41 queries, 71 mutations, 4 subscriptions) whose introspection is anonymously open.
 url: https://raw.githubusercontent.com/api-evangelist/newoldstamp/refs/heads/main/apis.yml
 accessModel:
-  pricing: unknown
-  onboarding: unknown
-  trial: false
-  try_now: false
+  pricing: freemium
+  onboarding: self-service
+  trial: true
+  try_now: true
   public: false
-  label: Unknown
-  confidence: low
-  source: []
-  generated: '2026-07-22'
-  method: derived
+  label: Self-service
+  confidence: medium
+  source:
+  - https://newoldstamp.com/pricing/
+  generated: '2026-08-13'
+  method: searched
 image: https://newoldstamp.com/images/logo-v4.svg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
+x-acquired-by: blackpearl-group
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-08-13'
 tags:
 - Company
 - Email Signatures
@@ -40,7 +44,24 @@ tags:
 - SaaS
 - Productivity
 - Website Visitor Identification
-apis: []
+- GraphQL
+apis:
+- name: Newoldstamp GraphQL API
+  description: The undocumented application GraphQL API that powers the Newoldstamp
+    dashboard — signatures, departments, campaigns, segments, Google Workspace and
+    Microsoft 365 deployment, and billing. Introspection is anonymously open; auth
+    is a bearer access token from the signIn mutation. No public developer program.
+  humanURL: https://newoldstamp.com/features/
+  baseURL: https://newoldstamp.com/api/graphql
+  properties:
+  - type: GraphQL
+    url: graphql/newoldstamp.graphql
+  - type: Authentication
+    url: authentication/newoldstamp-authentication.yml
+  - type: Conventions
+    url: conventions/newoldstamp-conventions.yml
+  - type: DataModel
+    url: data-model/newoldstamp-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -49,8 +70,18 @@ maintainers:
 common:
 - type: DomainSecurity
   url: security/newoldstamp-domain-security.yml
+- type: LLMsTxt
+  url: llms/newoldstamp-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Plans
+  url: plans/newoldstamp-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/newoldstamp-rate-limits.yml
 - type: Website
   url: https://newoldstamp.com
+- type: Documentation
+  url: https://support.newoldstamp.com/en/
 - type: Pricing
   url: https://newoldstamp.com/pricing/
 - type: Blog
@@ -66,7 +97,7 @@ common:
 - type: PrivacyPolicy
   url: https://newoldstamp.com/privacy/
 x-enrichment:
-  date: '2026-07-20'
-  status: minimal
-  artifacts_added: 1
+  date: '2026-08-13'
+  status: enriched
+  artifacts_added: 11
   pass: local-v1
