@@ -1,0 +1,98 @@
+generated: '2026-08-13'
+method: derived
+source: graphql/newoldstamp.graphql
+note: >-
+  Entity-relationship graph derived from Newoldstamp's live GraphQL object types
+  and their referenced fields (probed 2026-08-13).
+entities:
+- name: User
+  description: The account/user; owns departments and integration connections.
+- name: Company
+  description: The organization/account the user belongs to; holds the plan.
+- name: CompanyMember
+  description: A team member with granular management permissions (signatures, billing, integrations, roles, departments, segments).
+- name: Department
+  description: A grouping of signatures; the unit that campaigns and deploys target.
+- name: Signature
+  description: An email signature instance, optionally carrying a banner, template, layout and exchange rule.
+- name: Template
+  description: A reusable signature design.
+- name: Banner
+  description: A marketing banner image attached to signatures or campaigns.
+- name: Campaign
+  description: A time-bound banner marketing campaign across departments.
+- name: Segment
+  description: A dynamic grouping used for Exchange rule-based deployment.
+- name: Plan
+  description: A subscription/package plan (linked to a PlanCategory).
+- name: Integration
+  description: Google Workspace (gsuite) connection state.
+- name: Office
+  description: Microsoft 365 / Exchange connection state.
+- name: JobNotifier
+  description: Async job/notification record for long-running deploy/import/sync operations.
+relationships:
+- from: User
+  to: Department
+  kind: has_many
+  via: departments
+- from: User
+  to: Plan
+  kind: has_one
+  via: plan
+- from: User
+  to: Integration
+  kind: has_one
+  via: gsuiteInfo
+- from: User
+  to: Office
+  kind: has_one
+  via: officeInfo
+- from: Company
+  to: Plan
+  kind: has_one
+  via: plan
+- from: Department
+  to: Signature
+  kind: has_many
+  via: signatures
+- from: Department
+  to: Campaign
+  kind: has_many
+  via: campaigns
+- from: Department
+  to: ExchangeRule
+  kind: has_many
+  via: exchangeRules
+- from: Signature
+  to: Department
+  kind: belongs_to
+  via: department
+- from: Signature
+  to: Banner
+  kind: has_one
+  via: banner
+- from: Signature
+  to: Template
+  kind: has_one
+  via: template
+- from: Campaign
+  to: Department
+  kind: has_many
+  via: departments
+- from: Campaign
+  to: Signature
+  kind: has_many
+  via: signatures
+- from: Campaign
+  to: Banner
+  kind: has_one
+  via: banner
+- from: Banner
+  to: Department
+  kind: belongs_to
+  via: department
+- from: Plan
+  to: PlanCategory
+  kind: belongs_to
+  via: planCategory

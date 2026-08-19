@@ -1,0 +1,47 @@
+generated: '2026-08-13'
+method: derived
+status: candidate
+source: graphql/newoldstamp.graphql
+note: >-
+  No official MCP server exists for Newoldstamp. This is a candidate tool list
+  derived from the live GraphQL operations, showing what an MCP server over this
+  API could expose. Nobody ships this today.
+deployment:
+  mode: none
+  auth: unknown
+  verified: derived
+server:
+  name: newoldstamp
+  transport: null
+  url: null
+tools:
+- name: list_signatures
+  description: List signatures, optionally filtered by department/status
+  source_operation: graphql/newoldstamp.graphql#Query.signatures
+- name: get_signature
+  description: Fetch a single signature by id or uuid
+  source_operation: graphql/newoldstamp.graphql#Query.signature
+- name: create_signature
+  description: Create an email signature
+  source_operation: graphql/newoldstamp.graphql#Mutation.createSignature
+- name: list_departments
+  description: List departments
+  source_operation: graphql/newoldstamp.graphql#Query.departments
+- name: create_department
+  description: Create a department
+  source_operation: graphql/newoldstamp.graphql#Mutation.createDepartment
+- name: list_campaigns
+  description: List banner marketing campaigns in a date range
+  source_operation: graphql/newoldstamp.graphql#Query.campaigns
+- name: create_campaign
+  description: Create a banner marketing campaign across departments
+  source_operation: graphql/newoldstamp.graphql#Mutation.createCampaign
+- name: deploy_gsuite
+  description: Deploy signatures to Google Workspace users in a department
+  source_operation: graphql/newoldstamp.graphql#Mutation.deployGsuite
+- name: deploy_office
+  description: Deploy signatures to Microsoft 365 / Exchange users
+  source_operation: graphql/newoldstamp.graphql#Mutation.deployOffice
+- name: get_user
+  description: Fetch the authenticated user, plan and integrations
+  source_operation: graphql/newoldstamp.graphql#Query.user

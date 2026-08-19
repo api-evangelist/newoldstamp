@@ -1,0 +1,37 @@
+generated: '2026-08-13'
+method: probed
+source: https://newoldstamp.com/api/graphql
+note: >-
+  Newoldstamp has no OpenAPI securitySchemes to derive from; the auth model is
+  read from the live GraphQL schema (signIn / refreshToken mutations returning
+  UserAccessToken) and observed request headers. This is the application
+  backend, not a documented public developer API — there is no published API-key
+  program.
+summary:
+  types:
+  - http
+  http_scheme: bearer
+  token_issuance: password + OAuth (Google) login via signIn mutation
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearer_format: opaque-access-token
+  description: >-
+    Access token issued by the signIn mutation (email + password, or oauth via
+    OauthInput) as a UserAccessToken, and rotated by the refreshToken mutation.
+    Sent as a bearer credential on GraphQL requests.
+  sources:
+  - graphql/newoldstamp.graphql
+oauth_login:
+  provider: google
+  input_type: OauthInput
+  note: >-
+    Google OAuth is offered as an end-user sign-in method (signIn/signUp accept
+    an oauth: OauthInput), plus a recaptcha token (newGoogleRecaptchaToken). This
+    is consumer login, not a delegated third-party OAuth authorization surface —
+    there are no OAuth scopes and no /.well-known/oauth-authorization-server.
+mutations:
+- signIn(email, password, oauth, newGoogleRecaptchaToken) -> UserAccessToken
+- refreshToken(refreshToken) -> UserAccessToken
+- invitePasswordUpdate(invitationToken, password) -> UserAccessToken

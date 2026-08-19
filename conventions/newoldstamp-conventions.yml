@@ -1,0 +1,53 @@
+generated: '2026-08-13'
+method: derived
+source: graphql/newoldstamp.graphql
+note: >-
+  Cross-cutting request/response semantics derived from Newoldstamp's live
+  GraphQL schema (probed 2026-08-13). No provider-published API conventions doc
+  exists; this captures what the schema implies.
+transport:
+  protocol: GraphQL
+  endpoint: https://newoldstamp.com/api/graphql
+  method: POST
+  content_type: application/json
+  subscriptions: ActionCable (GraphQL subscriptions over websocket; jobNotifier, updatedSignatureStatus, updatedMicrosoftStatus, updatedCompanyPayment)
+authentication:
+  style: bearer
+  detail: see authentication/newoldstamp-authentication.yml
+pagination:
+  style: relay-cursor
+  detail: >-
+    Relay-style connections (BannerConnection, SignatureConnection,
+    DeployConnection) with forward/backward cursor args after, before, first,
+    last and pageInfo. List queries that are not connections (departments,
+    campaigns, templates) return plain arrays with no pagination.
+  params: [after, before, first, last]
+  response_fields: [pageInfo, edges, nodes]
+idempotency:
+  supported: false
+  detail: >-
+    No idempotency-key mechanism is exposed. Mutations are not idempotent by
+    contract; create* mutations will create duplicates on retry.
+error_envelope:
+  shape: graphql-errors
+  detail: >-
+    Standard GraphQL top-level errors[] array alongside data. Some resolvers
+    return a ResponseJson / Response scalar payload carrying operation status.
+    There is no RFC 9457 problem+json surface (this is not a REST API).
+request_tracing:
+  header: X-Request-Id
+  detail: Rails/Passenger returns an X-Request-Id response header per request.
+versioning:
+  scheme: unversioned
+  detail: >-
+    Single unversioned GraphQL endpoint at /api/graphql. Evolution is managed
+    through GraphQL field additions/deprecations (@deprecated) rather than URL
+    or header versioning.
+rate_limit_signaling:
+  detail: >-
+    No RateLimit-* or Retry-After headers observed on the GraphQL endpoint;
+    limits are undocumented. See rate-limits/newoldstamp-rate-limits.yml.
+cross_links:
+  authentication: authentication/newoldstamp-authentication.yml
+  data_model: data-model/newoldstamp-data-model.yml
+  rate_limits: rate-limits/newoldstamp-rate-limits.yml

@@ -1,0 +1,31 @@
+# Newoldstamp
+
+> Newoldstamp is an email signature management platform that lets companies create, brand, and centrally manage professional email signatures across teams, with signature marketing banners/campaigns, click analytics, and deployment to Google Workspace and Microsoft 365. Founded 2016; a wholly-owned subsidiary of Blackpearl Group since 2025. It also operates Pearl Diver, a website-visitor identification product.
+
+## Contract
+- Newoldstamp's application backend is a GraphQL API at https://newoldstamp.com/api/graphql (41 queries, 71 mutations, 4 subscriptions). Introspection is anonymous-open. There is no documented public developer program, no API-key portal, and no OpenAPI. Treat this as an undocumented application API.
+
+## Specs
+- GraphQL SDL: graphql/newoldstamp.graphql
+- GraphQL introspection: graphql/newoldstamp-introspection.json
+
+## Artifacts
+- Authentication (bearer / signIn): authentication/newoldstamp-authentication.yml
+- API conventions (Relay pagination, error envelope): conventions/newoldstamp-conventions.yml
+- Data model / ERD: data-model/newoldstamp-data-model.yml
+- MCP candidate tools: mcp/newoldstamp-mcp.yml
+- Plans & pricing: plans/newoldstamp-plans-pricing.yml
+- Rate limits (undocumented): rate-limits/newoldstamp-rate-limits.yml
+- Domain security probe: security/newoldstamp-domain-security.yml
+- Well-known probe: well-known/newoldstamp-well-known.yml
+
+## Docs
+- Website: https://newoldstamp.com
+- Features: https://newoldstamp.com/features/
+- Pricing: https://newoldstamp.com/pricing/
+- Help center: https://support.newoldstamp.com/en/
+- Blog: https://newoldstamp.com/blog/
+- Sign up: https://app.newoldstamp.com/sign-up
+- Sign in: https://app.newoldstamp.com/sign-in
+- Terms: https://newoldstamp.com/terms-of-use/
+- Privacy: https://newoldstamp.com/privacy/

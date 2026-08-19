@@ -1,0 +1,10 @@
+generated: '2026-08-13'
+method: searched
+source: https://newoldstamp.com/api/graphql (live response headers) + docs review
+note: >-
+  Newoldstamp publishes no rate-limit documentation, and the live GraphQL
+  endpoint returns no RateLimit-* / RateLimit / Retry-After headers. There is no
+  public developer program to document limits. Honest zero.
+limit_count: 0
+headers_observed: []
+limits: []

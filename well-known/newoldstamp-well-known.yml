@@ -1,0 +1,28 @@
+generated: '2026-08-13'
+method: probed
+source: live GET probes of /.well-known/* on Newoldstamp hosts, 2026-08-13
+note: >-
+  No .well-known discovery surface is served by Newoldstamp. The primary host
+  and app host 404 every probed path. support.newoldstamp.com serves a
+  security.txt, but it is Intercom's (Canonical: app.intercom.com) because the
+  help center is hosted on Intercom — it is NOT Newoldstamp's own security
+  policy, so no SecurityTxt pointer is emitted.
+hosts:
+- host: https://newoldstamp.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://app.newoldstamp.com
+  note: SPA catch-all returns 200 text/html for every path; no real documents.
+  documents:
+  - {path: /.well-known/security.txt, status: 200, content_type: text/html, real_document: false}
+  - {path: /.well-known/openid-configuration, status: 200, content_type: text/html, real_document: false}
+- host: https://support.newoldstamp.com
+  documents:
+  - {path: /.well-known/security.txt, status: 200, content_type: text/plain, real_document: true, owner: Intercom, canonical: https://app.intercom.com/.well-known/security.txt, third_party: true}

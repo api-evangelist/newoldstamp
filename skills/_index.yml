@@ -1,0 +1,17 @@
+generated: '2026-08-13'
+method: generated
+source: graphql/newoldstamp.graphql
+note: >-
+  Skills are grounded in Newoldstamp's live GraphQL operations (verified present
+  in the SDL). Newoldstamp ships no OpenAPI; the GraphQL schema is the
+  machine-readable contract these steps bind to. No provider-published
+  AGENTS.md/skills were found.
+skills:
+- file: newoldstamp-deploy-department-signatures.md
+  name: Roll out branded signatures to a department
+  api: graphql/newoldstamp.graphql
+  operations: [createDepartment, createSignature, deployGsuite, verifyGsuiteDeploy, deployOffice, verifyOfficeDeploy]
+- file: newoldstamp-run-banner-campaign.md
+  name: Run a signature banner marketing campaign
+  api: graphql/newoldstamp.graphql
+  operations: [uploadBanner, createCampaign, updateCampaign, completeCampaign]

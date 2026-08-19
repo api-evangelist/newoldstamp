@@ -1,0 +1,26 @@
+generated: '2026-08-13'
+method: searched
+source: https://newoldstamp.com/pricing/
+note: >-
+  Public pricing is a single self-serve tier plus a contact-sales tier. Billing
+  is annual, priced per signature. Amounts are USD as displayed.
+plan_count: 2
+currency: USD
+plans:
+- name: Standard
+  price: 109
+  currency: USD
+  billing_period: annual
+  unit: per-signature/year (displayed as ~$1.80 per signature/month)
+  included_quota: Up to 200 signatures
+  trial: 7-day free trial with full feature access
+  limits:
+    max_signatures: 200
+- name: Custom
+  price: null
+  billing_period: annual
+  included_quota: More than 200 signatures
+  access: contact sales
+  note: >-
+    For >200 signatures. Discounted pricing is also advertised for nonprofits,
+    education, agencies/resellers and startups (all contact-sales).
