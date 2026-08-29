@@ -12,6 +12,17 @@ description: Newoldstamp is an email signature management platform that lets com
   program, but its dashboard is powered by a GraphQL API at newoldstamp.com/api/graphql
   (41 queries, 71 mutations, 4 subscriptions) whose introspection is anonymously open.
 url: https://raw.githubusercontent.com/api-evangelist/newoldstamp/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-service
