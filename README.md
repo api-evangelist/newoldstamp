@@ -64,6 +64,109 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Newoldstamp is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Newoldstamp is an email signature management platform that lets companies create, brand, and centrally manage professional email signatures across their teams. It provides a signature generator with customizable templates, department- and role-based signature deployment, email signature marketing banners and campaigns, click analytics, and integrations with Google Workspace, Microsoft 365, and popular email clients. Newoldstamp also operates Pearl Diver, a website-visitor identification product. Founded in 2016 and a wholly-owned subsidiary of Blackpearl Group since 2025 (previously backed by 500 Global), it serves marketing, sales, and IT teams that want consistent branded email signatures at scale. Newoldstamp publishes no documented public developer program, but its dashboard is powered by a GraphQL API at newoldstamp.com/api/graphql (41 queries, 71 mutations, 4 subscriptions) whose introspection is anonymously open.
 
-Backed by: 500-global — https://newoldstamp.com
+**Areas:** Company · Email Signatures · Email Signature Management · Email Marketing · Branding · Software-as-a-Service · Productivity · Website Visitor Identification · GraphQL
+
+## Newoldstamp on APIs.io
+
+Everything profiled for Newoldstamp is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/newoldstamp/](https://apis.io/providers/newoldstamp/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Newoldstamp GraphQL API](https://apis.io/apis/newoldstamp/newoldstamp-graphql-api/) — The undocumented application GraphQL API that powers the Newoldstamp dashboard — signatures, departments, campaigns, segments, Google Workspace and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [newoldstamp](https://apis.io/servers/newoldstamp/newoldstamp/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Newoldstamp Authentication](https://apis.io/security/newoldstamp/newoldstamp-authentication/)
+- [Newoldstamp Domain Security](https://apis.io/security/newoldstamp/newoldstamp-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Newoldstamp Plans Pricing](https://apis.io/plans/newoldstamp/newoldstamp-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Newoldstamp Rate Limits](https://apis.io/rate-limits/newoldstamp/newoldstamp-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://newoldstamp.com)
+- [Documentation](https://support.newoldstamp.com/en/)
+- [Pricing](https://newoldstamp.com/pricing/)
+- [Sign up](https://app.newoldstamp.com/sign-up)
+- [Support](https://support.newoldstamp.com/en/)
+- [Blog](https://newoldstamp.com/blog/)
+- [Terms of service](https://newoldstamp.com/terms-of-use/)
+- [Privacy policy](https://newoldstamp.com/privacy/)
+
+## API Evangelist rating
+
+**Kin Score 36.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 35.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 30.4 |
+| Access clarity | 65.8 |
+
+**Agent readiness 18.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/newoldstamp/](https://apis.io/providers/newoldstamp/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Newoldstamp: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/newoldstamp/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
